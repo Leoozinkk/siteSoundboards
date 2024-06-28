@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-#sbtext{
+#titleText{
     font-size: 50px;
 }
 
@@ -96,7 +96,7 @@ footer{
         width: 150px;
     }
 
-    #sbtext{
+    #titleText{
         font-size: 40px;
     }
 

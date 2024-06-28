@@ -1,0 +1,82 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    padding-top: 1%;
+    padding-bottom: 0.25%;
+    max-width: 100%;
+    background-color: #0094C3;
+    text-align: center;
+}
+
+#titleText{
+    padding: 1%;
+    font-size: 3rem;
+}
+
+#main{
+    max-width: 900px;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    max-width: 900px;
+    height: 200px;
+    font-size: 4rem;
+    border-radius: 3rem;
+    border: 8px solid #4a1703;
+}
+
+section:hover{
+    cursor: pointer;
+}
+
+#secChaves{
+    background-image: url(Hahahahah.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#secLuiz{
+    background-image: url(luiz/images/luiz1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#secCarlinhos{
+    background-image: url(carlinhos/images/Carlinhos.png);
+    background-size: cover;
+    background-position: center;
+}
+
+p{
+    margin: auto;
+    padding: 0.5%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media (max-width: 855px){
+    #header{
+        margin-bottom: 15px;
+    }
+
+    section{
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    #titleText{
+        font-size: 2rem;
+        padding: 15px;
+    }
+}

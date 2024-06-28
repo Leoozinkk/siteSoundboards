@@ -40,11 +40,13 @@
   <audio src="sounds/bom dia otarios.mp3"></audio>
   <audio src="sounds/musica.mp3"></audio>
 
-  <div class="container-fluid" id="header">
-    <img src="images/luiz1.png" alt="Foto Luiz" id="logo">
-    <h1 id="sbtext">LUIZ SOUNDBOARD</h1>
-  </div>
-
+  <header>
+    <div class="container-fluid" id="header">
+      <img src="images/luiz1.png" alt="Foto Luiz" id="logo">
+      <h1 id="titleText">LUIZ SOUNDBOARD</h1>
+    </div>
+  </header>
+  
   <div class="container-fluid">
     <section id="disclaimer"><p><e id="atencao">ATENÇÃO:</e>&nbsp; alguns dos áudios a seguir podem estar mais altos ou mais baixos que os outros. Mas não culpe este singelo programador por esse problema, e sim o animal que grava esses áudios com microfone de geladeira ❤️</p></section>
     <div class="row">
@@ -161,24 +163,25 @@
         <button type="button" class="btn btn-success btn-block" id="chorando">"Chorando"</button>
       </div>
     </div>
-  <footer>
-    <center>
-      <div class="container" id="mute">
-        <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os sons</button>
-      </div>
-      <div class="container" id="parar">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <input type="checkbox" id="opcaoParar" checked>
-            </div>
-          </div>
-          <label class="form-control">Parar um som quando outro começar</label>
+
+    <footer>
+      <center>
+        <div class="container" id="mute">
+          <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os sons</button>
         </div>
-      </div>
-      <a href="../chaves/chaves.html"><button class="btn btn-danger btn-lg" id="voltar">VOLTAR AO MENU DO SITE</button></a>
-    </center>
-  </footer>
+        <div class="container" id="parar">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" id="opcaoParar" checked>
+              </div>
+            </div>
+            <label class="form-control">Parar um som quando outro começar</label>
+          </div>
+        </div>
+        <a href="../index.html"><button class="btn btn-danger btn-lg" id="voltar">VOLTAR AO MENU DO SITE</button></a>
+      </center>
+    </footer>
   </div>
 
   <script defer src="script.js" defer></script>

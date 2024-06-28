@@ -31,10 +31,13 @@
   <audio src="sounds/CalaEssaBocaM.mp3"></audio>
   <audio src="sounds/misterious.mp3"></audio>
 
-  <div class="container-fluid" id="header">
-    <img src="images/logo.png" alt="Logo Chaves" id="logo">
-    <h1 id="sbtext">MEME SOUNDBOARD</h1>
-  </div>
+  <header>
+    <div class="container-fluid" id="header">
+      <img src="images/logo.png" alt="Logo Chaves" id="logo">
+      <h1 id="titleText">MEME SOUNDBOARD</h1>
+    </div>
+  </header>
+  
 
   <div class="container-fluid" id="main">
     <div class="row">
@@ -111,28 +114,26 @@
         <button type="button" class="btn btn-light btn-block" id="hold">Cala essa boca (Madruga)</button>
       </div>
     </div>
-  </div>
-
-  <br>
-
-  <footer>
-    <center>
-      <div class="container" id="mute">
-        <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os sons</button>
-      </div>
-      <div class="container" id="parar">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <input type="checkbox" id="opcaoParar" checked>
-            </div>
-          </div>
-          <label class="form-control">Parar um som quando outro começar</label>
+    
+    <footer>
+      <center>
+        <div class="container" id="mute">
+          <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os sons</button>
         </div>
-      </div>
-      <a href="../luiz/luiz.html"><div class="container" id="luiz" style="display: none;"></div></a>
-    </center>
-  </footer>
+        <div class="container" id="parar">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" id="opcaoParar" checked>
+              </div>
+            </div>
+            <label class="form-control">Parar um som quando outro começar</label>
+          </div>
+        </div>
+        <a href="../index.html"><button class="btn btn-danger btn-lg" id="voltar">VOLTAR AO MENU DO SITE</button></a>
+      </center>
+    </footer>
+  </div>
 
   <script defer src="script.js" defer></script>
 </body>

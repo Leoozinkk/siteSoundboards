@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-#sbtext{
+#titleText{
     color: rgb(255, 125, 0);
     font-size: 50px;
     font-family: 'happysans', sans-serif;
@@ -52,17 +52,18 @@ footer{
 }
 
 #mute{
-    margin: 1%;
+    margin: 10px;
     width: 700px;
 }
 
 #parar{
     width: fit-content;
-    margin-bottom: 1%;
 }
 
-#botaoLuiz{
-    margin-bottom: 1%;
+#voltar{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
 }
 
 @font-face {
@@ -80,15 +81,24 @@ footer{
         padding-top: 2%;
     }
 
-    #sbtext{
+    #logo{
+        width: 200px;
+    }
+
+    #titleText{
         font-size: 40px;
     }
 
-    #mute{
-        width: 100%;
+    .col{
+        padding: 5%;
     }
 
-    #logo{
-        width: 200px;
+    #mute{
+        margin: 1%;
+        width: auto;
+    }
+
+    #voltar{
+        margin: 1%;
     }
 }
