@@ -26,7 +26,6 @@
 
 .section{
     display: flex;
-    align-items: center;
     margin: auto;
     text-align: center;
     max-width: 900px;
@@ -70,9 +69,10 @@ p{
         margin-bottom: 15px;
     }
 
-    section{
+    .section{
+        text-align: center;
         font-size: 2rem;
-        width: 80%;
+        width: 90%;
     }
 
     #titleText{
