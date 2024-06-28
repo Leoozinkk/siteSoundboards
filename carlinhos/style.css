@@ -90,6 +90,8 @@ footer{
 @media (max-width: 855px){
     #header{
         padding-top: 2%;
+        
+    background: linear-gradient(90deg, #ff0000 5%, #ffffff 50%, #000000 95%);
     }
 
     #logo{
