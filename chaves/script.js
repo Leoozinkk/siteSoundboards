@@ -1,22 +1,13 @@
-//identifica cada botão pela posição dele no html e executa os audios pela sua, também, posição no html 
-document.getElementsByTagName('button')[0].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[0].play()};
-document.getElementsByTagName('button')[1].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[1].play()};
-document.getElementsByTagName('button')[2].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[2].play()};
-document.getElementsByTagName('button')[3].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[3].play()};
-document.getElementsByTagName('button')[4].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[4].play()};
-document.getElementsByTagName('button')[5].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[5].play()};
-document.getElementsByTagName('button')[6].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[6].play()};
-document.getElementsByTagName('button')[7].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[7].play()};
-document.getElementsByTagName('button')[8].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[8].play()};
-document.getElementsByTagName('button')[9].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[9].play()};
-document.getElementsByTagName('button')[10].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[10].play()};
-document.getElementsByTagName('button')[11].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[11].play()};
-document.getElementsByTagName('button')[12].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[12].play()};
-document.getElementsByTagName('button')[13].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[13].play()};
-document.getElementsByTagName('button')[14].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[14].play()};
-document.getElementsByTagName('button')[15].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[15].play()};
-document.getElementsByTagName('button')[16].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[16].play()};
-document.getElementsByTagName('button')[17].onclick = function(){voltarDoZero(), document.getElementsByTagName('audio')[17].play()};
+//toca os áudios com os botões de mesma posição no html
+const buttons = document.getElementsByTagName('button');
+const audios = document.getElementsByTagName('audio');
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function() {
+    voltarDoZero();
+    audios[i].play();
+  };
+}
 
 document.getElementById('btnmute').onclick = function(){parar()}; //botão de mute
 
@@ -38,7 +29,7 @@ function parar(){
     }
 };
 
-/* SEÇÃO DO LUIZ VIADO CAGOU NO ALAMBRADO*/
+/*//SEÇÃO DO LUIZ VIADO CAGOU NO ALAMBRADO
 const buttonContainer = document.getElementById('luiz');
 sfx = document.getElementsByTagName('audio')[18];
 sfx.volume  = .35;
@@ -62,7 +53,7 @@ document.addEventListener('keydown', (event) => {
 	if (pressedKeys.length > requiredKeys.length) {
 		pressedKeys.shift();
 	} //faz a tecla pressionada ter o seu valor salvo na lista "pressedKeys" e remove as teclas antigas
-	if (pressedKeys.toString() === requiredKeys.toString() && document.getElementById('botaoLuiz') == null /*para evitar que tenha mais de um botão*/){
+	if (pressedKeys.toString() === requiredKeys.toString() && document.getElementById('botaoLuiz') == null){ //para evitar que tenha mais de um botão
 		criarBotao();
 	} //cria o botão e toca o efeitinho se a condicional for cumprida
 });
@@ -81,4 +72,4 @@ botaoSegurar.addEventListener('touchstart', () => {
 
 botaoSegurar.addEventListener('touchend', () => {
 	clearTimeout(timer);
-});
+});*/
