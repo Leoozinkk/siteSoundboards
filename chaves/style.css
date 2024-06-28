@@ -1,0 +1,94 @@
+::-webkit-scrollbar-track{
+    border-radius: 100%;
+}
+
+#header{
+    padding-top: 1%;
+    padding-bottom: .25%;
+    max-width: 100%;
+    background-color: green;
+    text-align: center;
+}
+
+#sbtext{
+    color: rgb(255, 125, 0);
+    font-size: 50px;
+    font-family: 'happysans', sans-serif;
+}
+
+#main{
+    background-image: url(images/background.jpg);
+    max-width: 2000px;
+}
+
+.soundsimg{
+    width: 400px;
+    height: 400px;
+    padding: 5%;
+    margin: auto;
+}
+
+.col{
+    padding: 2%;
+    text-align: center;
+}
+
+.btn-light{
+    max-width: 450px;
+    margin: auto;
+}
+
+button.btn-light:hover{
+    background-color: #2196f3;
+    border-color: #2196f3;
+    color: white;
+}
+
+footer{
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    max-width: 2000px;
+}
+
+#mute{
+    margin: 1%;
+    width: 700px;
+}
+
+#parar{
+    width: fit-content;
+    margin-bottom: 1%;
+}
+
+#botaoLuiz{
+    margin-bottom: 1%;
+}
+
+@font-face {
+    font-family: 'happysans';
+    src: url(HappySans.ttf) format(truetype);
+}
+
+@media (max-width: 855px){
+    .soundsimg{
+        width: 250px;
+        height: 250px;
+    }
+
+    #header{
+        padding-top: 2%;
+    }
+
+    #sbtext{
+        font-size: 40px;
+    }
+
+    #mute{
+        width: 100%;
+    }
+
+    #logo{
+        width: 200px;
+    }
+}

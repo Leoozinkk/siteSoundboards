@@ -1,0 +1,127 @@
+::-webkit-scrollbar-track{
+    border-radius: 100%;
+}
+
+#header{
+    padding-top: 1%;
+    padding-bottom: .25%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(85,37,131,1) 40%, rgba(194,133,71,1) 70%, rgba(253,185,39,1) 100%);
+    text-align: center;
+}
+
+#sbtext{
+    font-size: 50px;
+}
+
+#logo{
+    width: 250px;
+}
+
+.container-fluid{
+    padding-top: 30px;
+    background-color: #0f690f;
+    max-width: 2000px;
+}
+
+#disclaimer{
+    margin: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 1100px;
+    background-color: white;
+    font-size: 1.3rem;
+    border: gray 5px solid;
+    text-align: center;
+    padding: 2px;
+}
+
+#atencao{
+    color: red;
+    font-size: 2.0rem;
+}
+
+.col{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.soundsimg{
+    width: 400px;
+    height: 400px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 3px solid black;
+}
+
+.btn-success{
+    max-width: 450px;
+    margin: auto;
+}
+
+button.btn-success:hover{
+    background-color: #088546;
+    border-color: #088546;
+}
+
+footer{
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    max-width: 2000px;
+}
+
+#mute{
+    margin: 1%;
+    width: 700px;
+}
+
+#parar{
+    width: fit-content;
+}
+
+#voltar{
+    width: 300px;
+    height: 50px;
+    margin: 1%;
+}
+
+@media (max-width: 855px){
+    #disclaimer{
+        width: 300px;
+        font-size: 1rem;
+        padding: 1px;
+    }
+
+    #atencao{
+        font-size: 1.5rem;
+    }
+
+    #header{
+        padding-top: 2%;
+    }
+
+    #logo{
+        width: 150px;
+    }
+
+    #sbtext{
+        font-size: 40px;
+    }
+
+    .soundsimg{
+        width: 250px;
+        height: 250px;
+    }
+
+    #mute{
+        margin: 1%;
+        width: auto;
+    }
+
+    #voltar{
+        margin: 1%;
+    }
+}
