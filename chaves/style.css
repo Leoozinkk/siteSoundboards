@@ -20,8 +20,7 @@ body{
     font-family: 'happysans', sans-serif;
 }
 
-#main{
-    background-image: url(images/background.jpg);
+.container-fluid{
     max-width: 2000px;
 }
 
