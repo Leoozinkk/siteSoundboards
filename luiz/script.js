@@ -31,6 +31,7 @@ function parar(){
 
 //SEU GATOOOOOOOOOO
 sfx = document.getElementById('sfx');
+sfx.volume  = .35;
 const divCecato = document.getElementById('divCecato');
 
 function cecato(){
