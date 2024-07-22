@@ -27,8 +27,9 @@ body{
 .soundsimg{
     width: 400px;
     height: 400px;
-    padding: 5%;
-    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 3px solid black;
 }
 
 .col{
