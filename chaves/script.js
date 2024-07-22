@@ -40,7 +40,7 @@ function criarBotao(){
 	button.className = 'btn btn-primary';
 	button.id = 'botaoLuiz';
 	button.textContent = 'Luiz Mode';
-	buttonContainer.style.display  = 'block';
+	buttonContainer.style.display = 'block';
 	buttonContainer.appendChild(button);
 };
 
