@@ -50,3 +50,18 @@ document.addEventListener('keydown', (event) => {
 		cecato();
 	} //cria o botão e toca o efeitinho se a condicional for cumprida
 });
+
+botaoSegurar = document.getElementById("hold");
+let timer;
+
+botaoSegurar.addEventListener('touchstart', () => {
+	timer = setTimeout(() => {
+		if(divCecato.style.display == 'none'){
+			cecato();
+		}
+	}, 5000);
+});
+
+botaoSegurar.addEventListener('touchend', () => {
+	clearTimeout(timer);
+});
