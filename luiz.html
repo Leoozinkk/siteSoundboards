@@ -10,8 +10,9 @@
 </head>
 
 <body style="background-color: #1caf1c;">
-  <!--audios para pôr no javascript-->
+  <!--audios para pegar no javascript-->
   <audio src="luiz/sounds/GEOVANNA.mp3"></audio>
+  <audio src="luiz/sounds/cecato cover.mp3"></audio>
   <audio src="luiz/sounds/Gdesculpas.mp3"></audio>
   <audio src="luiz/sounds/musica.mp3"></audio>
   <audio src="luiz/sounds/que isso.mp3"></audio>
@@ -27,6 +28,7 @@
   <audio src="luiz/sounds/quer x tudo.mp3"></audio>
   <audio src="luiz/sounds/cagano.mp3"></audio>
   <audio src="luiz/sounds/cecato.mp3"></audio>
+  <audio src="luiz/sounds/só falei pro Ryusei.mp3"></audio>
   <audio src="luiz/sounds/calica manito.mp3"></audio>
   <audio src="luiz/sounds/ia.mp3"></audio>
   <audio src="luiz/sounds/bora de lol.mp3"></audio>
@@ -34,11 +36,13 @@
   <audio src="luiz/sounds/cagou.mp3"></audio>
   <audio src="luiz/sounds/ai seu viado.mp3"></audio>
   <audio src="luiz/sounds/hit ler.mp3"></audio>
+  <audio src="luiz/sounds/fica quieto arrombado.mp3"></audio>
   <audio src="luiz/sounds/antonio.mp3"></audio>
   <audio src="luiz/sounds/crazy dave.mp3"></audio>
   <audio src="luiz/sounds/julia.mp3"></audio>
   <audio src="luiz/sounds/sinais.mp3"></audio>
   <audio src="luiz/sounds/chorando.mp3"></audio>
+  <audio src="luiz/sounds/misterious.mp3" id="sfx"></audio>
 
   <header>
     <div class="container-fluid" id="header">
@@ -52,115 +56,127 @@
     <div class="row">
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="gio">GIOVANNA</button>
+        <button type="button" class="btn btn-success btn-block">GIOVANNA</button>
+      </div>
+      <div class="col" id="divCecato" style="display: none;">
+        <img src="luiz/images/cecato.png" alt="Luizão" class="soundsimg"><br>
+        <button type="button" class="btn btn-success btn-block">GIOVANNA - Cecato Cover</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="gioD">GIOVANNA (desculpas)</button>
+        <button type="button" class="btn btn-success btn-block">GIOVANNA (desculpas)</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="musica">Música romântica</button>
+        <button type="button" class="btn btn-success btn-block">Música romântica</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="queisso">Que isso, meu amigo?</button>
+        <button type="button" class="btn btn-success btn-block">Que isso, meu amigo?</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="paulo">Paulo Escobrano</button>
+        <button type="button" class="btn btn-success btn-block">Paulo Escobrano</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="loleza1">Loleza 1</button>
+        <button type="button" class="btn btn-success btn-block">Loleza 1</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="loleza2">Loleza 2</button>
+        <button type="button" class="btn btn-success btn-block">Loleza 2</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="lolezaR">Loleza - Remix</button>
+        <button type="button" class="btn btn-success btn-block">Loleza - Remix</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="disco">Já chegou o disco voador</button>
+        <button type="button" class="btn btn-success btn-block">Já chegou o disco voador</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="bomdia">Bom dia otários</button>
+        <button type="button" class="btn btn-success btn-block">Bom dia otários</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="tiquinho">Tiquinho igual meu carrinho</button>
+        <button type="button" class="btn btn-success btn-block">Tiquinho igual meu carrinho</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="agua">Água fria</button>
+        <button type="button" class="btn btn-success btn-block">Água fria</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="esquizo">Esquizofrenia</button>
+        <button type="button" class="btn btn-success btn-block">Esquizofrenia</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="xtudo">Quer X-Tudo?</button>
+        <button type="button" class="btn btn-success btn-block">Quer X-Tudo?</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="cagano">Luiz cagando</button>
+        <button type="button" class="btn btn-success btn-block">Luiz cagando</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="cecato">Cecato cagou</button>
+        <button type="button" class="btn btn-success btn-block">Cecato cagou</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="calica">Ai Calica Alejandro</button>
+        <button type="button" class="btn btn-success btn-block">Só falei pro Ryusei</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="ia">Luiz falando verdades</button>
+        <button type="button" class="btn btn-success btn-block">Ai Calica Alejandro</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="vaisefuderluiz">🖕🖕🖕</button>
+        <button type="button" class="btn btn-success btn-block">Luiz falando verdades</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="mamonas">Cantando Mamonas</button>
+        <button type="button" class="btn btn-success btn-block">🖕🖕🖕</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="cagou">Luiz Luiz, cagou...</button>
+        <button type="button" class="btn btn-success btn-block">Cantando Mamonas</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="viado">Ai seu viado</button>
+        <button type="button" class="btn btn-success btn-block">Luiz Luiz, cagou...</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="hitler">Pelo menos...</button>
+        <button type="button" class="btn btn-success btn-block">Ai seu viado</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="antonio">Olha o Antônio</button>
+        <button type="button" class="btn btn-success btn-block">Pelo menos...</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="crazy">Crazy Dave</button>
+        <button type="button" class="btn btn-success btn-block">Fica quieto arrombado</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="julia">Júlia</button>
+        <button type="button" class="btn btn-success btn-block">Olha o Antônio</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="sinais">Nunca dei sinais</button>
+        <button type="button" class="btn btn-success btn-block">Crazy Dave</button>
       </div>
       <div class="col">
         <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block" id="chorando">"Chorando"</button>
+        <button type="button" class="btn btn-success btn-block">Júlia</button>
+      </div>
+      <div class="col">
+        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
+        <button type="button" class="btn btn-success btn-block">Nunca dei sinais</button>
+      </div>
+      <div class="col">
+        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
+        <button type="button" class="btn btn-success btn-block">"Chorando"</button>
       </div>
     </div>
 
