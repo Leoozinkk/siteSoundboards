@@ -2,6 +2,10 @@
     border-radius: 100%;
 }
 
+body{
+    background-image: url(images/background.jpg);
+}
+
 #header{
     padding-top: 1%;
     padding-bottom: .25%;
