@@ -52,6 +52,7 @@ document.addEventListener('keydown', (event) => {
 	} //cria o botão e toca o efeitinho se a condicional for cumprida
 });
 
+//celular
 botaoSegurar = document.getElementById("hold");
 let timer;
 
