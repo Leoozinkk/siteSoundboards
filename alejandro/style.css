@@ -1,0 +1,109 @@
+::-webkit-scrollbar-track{
+    border-radius: 100%;
+}
+
+#header{
+    padding-top: 1%;
+    padding-bottom: .25%;
+    max-width: 100%;
+    background: linear-gradient(#d91023 20%, #ffffff 50%, #d91023 70%);
+    text-align: center;
+}
+
+#titleText{
+    font-size: 50px;
+}
+
+#logo{
+    width: 250px;
+}
+
+.container-fluid{
+    max-width: 2000px;
+}
+
+#tituloSecao{
+    text-align: center;
+}
+
+hr{
+    height: 123mm;
+}
+
+.col{
+    padding: 2%;
+    text-align: center;
+}
+
+.soundsimg{
+    width: 400px;
+    height: 400px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 3px solid black;
+}
+
+.btn-light{
+    max-width: 450px;
+    margin: auto;
+}
+
+button.btn-light:hover{
+    background-color: #750a0a;
+    border-color: #750a0a;
+    color: #ffffff;
+}
+
+footer{
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    max-width: 2000px;
+}
+
+#mute{
+    margin: 10px;
+    width: 700px;
+}
+
+#parar{
+    width: fit-content;
+}
+
+#voltar{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+}
+
+@media (max-width: 855px){
+    #header{
+        padding-top: 2%;
+    }
+
+    #logo{
+        width: 150px;
+    }
+
+    #titleText{
+        font-size: 40px;
+    }
+
+    .col{
+        padding: 5%;
+    }
+
+    .soundsimg{
+        width: 250px;
+        height: 250px;
+    }
+
+    #mute{
+        margin: 1%;
+        width: auto;
+    }
+
+    #voltar{
+        margin: 1%;
+    }
+}
