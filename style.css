@@ -20,7 +20,8 @@
 
 #main{
     max-width: 900px;
-    padding-top: 2%;
+    padding-top: 30px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -47,6 +48,12 @@ section:hover{
 
 #secLuiz{
     background-image: url(luiz/images/luiz1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#secAlejo{
+    background-image: url(alejandro/images/alejandroVIADO.jpg);
     background-size: cover;
     background-position: center;
 }
