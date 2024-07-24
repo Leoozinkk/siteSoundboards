@@ -72,10 +72,6 @@ p{
 }
 
 @media (max-width: 855px){
-    #header{
-        margin-bottom: 15px;
-    }
-
     .section{
         text-align: center;
         font-size: 2rem;
