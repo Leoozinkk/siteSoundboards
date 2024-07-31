@@ -1,5 +1,5 @@
 //toca os áudios com os botões de mesma posição no html
-const buttons = document.getElementsByTagName('button');
+const buttons = document.getElementsByClassName('audiobtn');
 const audios = document.getElementsByTagName('audio');
 
 for (let i = 0; i < buttons.length; i++) {
