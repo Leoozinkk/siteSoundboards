@@ -26,10 +26,6 @@
     text-align: center;
 }
 
-hr{
-    height: 123mm;
-}
-
 .col{
     padding: 2%;
     text-align: center;
@@ -40,7 +36,7 @@ hr{
     height: 400px;
     margin-top: 5%;
     margin-bottom: 5%;
-    border: 3px solid black;
+    border: 3px solid #000000;
 }
 
 .btn-light{
@@ -52,6 +48,34 @@ button.btn-light:hover{
     background-color: #750a0a;
     border-color: #750a0a;
     color: #ffffff;
+}
+
+.transcBox{
+    border: 3px solid #d7d7d7;
+    background-color: #ffffff;
+}
+
+.transcTitle{
+    margin: 0;
+}
+
+.transcImg{
+    width: 20px;
+    height: 20px;
+    padding: .5%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.transcText{
+    hyphens: auto;
+    display: none;
+    padding: 3.5px;
+    background-color: #d7d7d7;
+    border: 1px solid #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 footer{
