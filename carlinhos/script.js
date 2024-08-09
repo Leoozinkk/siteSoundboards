@@ -43,4 +43,4 @@ for (let i = 0; i < opcaoSeta.length; i++) {
       opcaoSeta[i].style.rotate = '0deg';
     }
   };
-}
+};
