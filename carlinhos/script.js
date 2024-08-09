@@ -28,3 +28,19 @@ function parar(){
         som[i].currentTime = 0; //voltar o som do zero
     }
 };
+
+//fazer o balão do transcritor abrir ao clicar
+const opcaoSeta = document.getElementsByClassName('transcImg');
+const textoTranscrito = document.getElementsByClassName('transcText');
+
+for (let i = 0; i < opcaoSeta.length; i++) {
+  opcaoSeta[i].onclick = function(){
+    if(textoTranscrito[i].style.display != 'block'){
+      textoTranscrito[i].style.display = 'block';
+      opcaoSeta[i].style.rotate = '180deg';
+    }else{
+      textoTranscrito[i].style.display = 'none';
+      opcaoSeta[i].style.rotate = '0deg';
+    }
+  };
+}
