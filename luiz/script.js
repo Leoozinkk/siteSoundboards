@@ -32,11 +32,11 @@ function parar(){
 //SEU GATOOOOOOOOOO
 sfx = document.getElementById('sfx');
 sfx.volume  = .35;
-const divCecato = document.getElementById('divCecato');
+const divCecato = document.querySelector('#divCecato');
 
 function cecato(){
   sfx.play();
-  divCecato.style.display = 'block';
+  divCecato.style.display = 'contents';
 };
 
 const requiredKeys = ['KeyC', 'KeyE', 'KeyC', 'KeyA', 'KeyT', 'KeyO']; //as teclas que tem que apertar
