@@ -47,7 +47,7 @@ document.addEventListener('keydown', (event) => {
 	if (pressedKeys.length > requiredKeys.length) {
 		pressedKeys.shift();
 	} //faz a tecla pressionada ter o seu valor salvo na lista "pressedKeys" e remove as teclas antigas
-	if (pressedKeys.toString() === requiredKeys.toString() && divCecato.style.display == 'none'){ //para evitar que tenha mais de um botão
+	if (pressedKeys.toString() === requiredKeys.toString() && divCecato.style.display == 'none'){ //chechar para "display: none" evita duplicação dos áudios
 		cecato();
 	} //cria o botão e toca o efeitinho se a condicional for cumprida
 });
