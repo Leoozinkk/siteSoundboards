@@ -5,7 +5,7 @@
 #header{
     padding-top: 1%;
     padding-bottom: .25%;
-    max-width: 100%;
+    width: 100%;
     background: linear-gradient(#d91023 20%, #ffffff 50%, #d91023 70%);
     text-align: center;
 }
@@ -20,6 +20,7 @@
 
 .container-fluid{
     max-width: 2000px;
+    background-color: #a52a2a;
 }
 
 #tituloSecao{
@@ -27,21 +28,33 @@
 }
 
 .col{
-    padding: 2%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
 .soundsimg{
+    background-image: url(images/alejandro.jpg);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid #000000;
+}
+
+.speaker{
     width: 400px;
     height: 400px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border: 3px solid #000000;
+    display: none;
 }
 
 .btn-light{
     max-width: 450px;
     margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
 }
 
 button.btn-light:hover{
@@ -90,7 +103,7 @@ footer{
     width: 700px;
 }
 
-#parar{
+#opcao{
     width: fit-content;
 }
 
@@ -118,16 +131,25 @@ footer{
     }
 
     .soundsimg{
+        width: 256px;
+        height: 256px;
+    }
+
+    .speaker{
         width: 250px;
         height: 250px;
     }
 
     #mute{
-        margin: 1%;
+        margin: 2%;
         width: auto;
     }
 
+    .form-control{
+        font-size: 1rem;
+    }
+
     #voltar{
-        margin: 1%;
+        margin: 2%;
     }
 }

@@ -27,12 +27,12 @@
 #disclaimer{
     margin: auto;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 1100px;
+    width: 70%;
     background-color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     border: #808080 5px solid;
     text-align: center;
-    padding: 2px;
+    padding: 3px;
 }
 
 #atencao{
@@ -41,21 +41,42 @@
 }
 
 .col{
-    padding: 2%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
-.soundsimg{
+.soundsimgLuiz{
+    background-image: url(images/luiz3.png);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid #000000;
+}
+
+.soundsimgCecato{
+    background-image: url(images/cecato.png);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid #000000;
+}
+
+.speaker{
     width: 400px;
     height: 400px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border: 3px solid #000000;
+    display: none;
 }
 
 .btn-success{
     max-width: 450px;
     margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
 }
 
 button.btn-success:hover{
@@ -103,7 +124,7 @@ footer{
     width: 700px;
 }
 
-#parar{
+#opcao{
     width: fit-content;
 }
 
@@ -115,7 +136,6 @@ footer{
 
 @media (max-width: 855px){
     #disclaimer{
-        width: 300px;
         font-size: 1rem;
         padding: 1px;
     }
@@ -140,7 +160,12 @@ footer{
         padding: 5%;
     }
 
-    .soundsimg{
+    .soundsimgLuiz, .soundsimgCecato{
+        width: 256px;
+        height: 256px;
+    }
+
+    .speaker{
         width: 250px;
         height: 250px;
     }
@@ -148,6 +173,10 @@ footer{
     #mute{
         margin: 1%;
         width: auto;
+    }
+
+    .form-control{
+        font-size: 1rem;
     }
 
     #voltar{

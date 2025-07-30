@@ -25,21 +25,31 @@ body{
 }
 
 .soundsimg{
+    background-size: cover;
     width: 400px;
     height: 400px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border: 3px solid black;
+    margin: auto;
+}
+
+.speaker{
+    width: 400px;
+    height: 400px;
+    display: none;
 }
 
 .col{
-    padding: 2%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
 .btn-light{
     max-width: 450px;
     margin: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
 }
 
 button.btn-light:hover{
@@ -60,7 +70,7 @@ footer{
     width: 700px;
 }
 
-#parar{
+#opcao{
     width: fit-content;
 }
 
@@ -77,6 +87,11 @@ footer{
 
 @media (max-width: 855px){
     .soundsimg{
+        width: 250px;
+        height: 250px;
+    }
+
+    .speaker{
         width: 250px;
         height: 250px;
     }
@@ -100,6 +115,10 @@ footer{
     #mute{
         margin: 1%;
         width: auto;
+    }
+
+    .form-control{
+        font-size: 1rem;
     }
 
     #voltar{

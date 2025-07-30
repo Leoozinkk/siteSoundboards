@@ -19,8 +19,8 @@
 }
 
 .container-fluid{
-    background-color: #b9b9b9;
     max-width: 2000px;
+    background-color: #b9b9b9;
 }
 
 #atencao{
@@ -44,17 +44,43 @@ hr{
     text-align: center;
 }
 
-.soundsimg{
+.soundsimg2{
+    background-image: url(images/Carlinhos2.png);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+.soundsimg3{
+    background-image: url(images/Carlinhos3.png);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+.soundsimg4{
+    background-image: url(images/Carlinhos4.jpg);
+    background-size: cover;
+    width: 406px;
+    height: 406px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+.speaker{
     width: 400px;
     height: 400px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border: 3px solid black;
+    display: none;
 }
 
 .btn-light{
     max-width: 450px;
     margin: auto;
+    margin-top: 21px;
 }
 
 button.btn-light:hover{
@@ -75,7 +101,7 @@ footer{
     width: 700px;
 }
 
-#parar{
+#opcao{
     width: fit-content;
 }
 
@@ -99,7 +125,12 @@ footer{
         font-size: 40px;
     }
 
-    .soundsimg{
+    .soundsimg2, .soundsimg3, .soundsimg4{
+        width: 250px;
+        height: 250px;
+    }
+
+    .speaker{
         width: 250px;
         height: 250px;
     }
@@ -107,6 +138,10 @@ footer{
     #mute{
         margin: 1%;
         width: auto;
+    }
+
+    .form-control{
+        font-size: 1rem;
     }
 
     #voltar{

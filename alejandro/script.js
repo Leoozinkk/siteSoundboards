@@ -1,32 +1,43 @@
-//toca os áudios com os botões de mesma posição no html
 const buttons = document.getElementsByClassName('audiobtn');
-const audios = document.getElementsByTagName('audio');
+let audio = document.querySelectorAll('audio');
+const speaker = document.getElementsByClassName('speaker');
+const checkbox_speaker = document.getElementById('opcaoSpeaker');
 
-for (let i = 0; i < buttons.length; i++) {
+for (let i = 0; i < buttons.length; i++){ // relaciona a ordem da posição botão apertado com a dos áudios e ativa seu respectivo ícone de alto-falante
   buttons[i].onclick = function(){
     voltarDoZero();
-    audios[i].play();
+    audio[i].play();
+    speakerDisplay(i);
   };
 }
 
 document.getElementById('btnmute').onclick = function(){parar()}; //botão de mute
 
-var som = document.querySelectorAll('audio'); //todos os elementos de áudio
-
-//função que faz os audios pararem apenas se a checkbox estiver verificada (usado nos botões com áudio)
-function voltarDoZero(){
-  var checkbox_parar = document.getElementById('opcaoParar'); //checkbox de parar os sons
-  if (checkbox_parar.checked) {
-    parar()
+//função q faz todos os áudios pararem (usado no botão de mute)
+function parar(){
+  for (let i = 0; i < audio.length; i++) {
+    audio[i].pause(); //pausar o som onde ele está
+    audio[i].currentTime = 0; //voltar o som do zero
+    if (speaker[i]) { // confere se a chamada para o "speaker" existe para evitar erros
+      speaker[i].style.display = 'none';
+    }
   }
 };
 
-//função q faz todos os áudios pararem (usado no botão de mute)
-function parar(){
-  for (var i = 0; i < som.length; i++) {
-    som[i].pause(); //pausar o som onde ele está
-    som[i].currentTime = 0; //voltar o som do zero
+//função que faz os áudios pararem apenas se a checkbox estiver verificada (usado nos botões de áudio)
+function voltarDoZero(){
+  let checkbox_parar = document.getElementById('opcaoParar'); //checkbox de parar os sons
+  if (checkbox_parar.checked) {
+    parar();
   }
+};
+
+//função que determina se os ícones de alto-falantes aparecem ou não segundo a checkbox e depois desaparecem quando acabar o áudio
+function speakerDisplay(arg){
+  if (checkbox_speaker.checked){
+    speaker[arg].style.display = 'block';
+  }
+  audio[arg].onended = function(){speaker[arg].style.display = 'none';}
 };
 
 //fazer o balão do transcritor abrir ao clicar
