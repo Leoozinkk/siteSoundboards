@@ -3,41 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Soundboards</title>
   <link rel="shortcut icon" href="speaker.png" type="image/x-icon">
 </head>
 
-<body bgcolor="00CCD6">
+<body style="background-color: #333838;">
 
   <header>
     <div class="container-fluid" id="header">
-      <h1 id="titleText">Selecione o Soundboard</h1>
+      <h1 id="titleText">Escolha o Soundboard</h1>
     </div>
   </header>
 
-  <main>
-    <center>
-      <div style="width: 100%;">
-        <div id="main">
-          <a href="chaves.html"><div class="section" id="secChaves">
-            <p>CHAVES</p>
-          </div></a>
-          <br>
-          <a href="luiz.html"><div class="section" id="secLuiz">
-            <p>LUIZ</p> 
-          </div></a>
-          <br>
-          <a href="alejandro.html"><div class="section" id="secAlejo">
-            <p>ALEJANDRO</p> 
-          </div></a>
-          <br>
-          <a href="carlinhos.html"><div class="section" id="secCarlinhos">
-            <p>CARLINHOS</p>
-          </div></a>
-        </div>
-      </div>
-    </center>
-  </main>
+  <div class="main">
+    <div class="selector" id="selector1">
+      <img src="chaves/images/icon.png" alt="Imagem Chaves" class="icon">
+      <h1>CHAVES</h1>
+      <hr>
+      <a href="chaves.html"><button type="button" class="btn btn-light">Selecionar soundboard</button></a>
+    </div>
+    <div class="selector" id="selector2">
+      <img src="luiz/images/luiz2.png" alt="Imagem Luiz" class="icon">
+      <h1>LUIZ</h1>
+      <hr>
+      <a href="luiz.html"><button type="button" class="btn btn-light">Selecionar soundboard</button></a>
+    </div>
+    <div class="selector" id="selector3">
+      <img src="alejandro/images/alejandroVIADO.jpg" alt="Imagem Alejandro" class="icon">
+      <h1>ALEJANDRO</h1>
+      <hr>
+      <a href="alejandro.html"><button type="button" class="btn btn-light">Selecionar soundboard</button></a>
+    </div>
+    <div class="selector" id="selector4">
+      <img src="carlinhos/images/Carlinhos.png" alt="Imagem Carlinhos" class="icon">
+      <h1>CARLINHOS</h1>
+      <hr>
+      <a href="carlinhos.html"><button type="button" class="btn btn-dark">Selecionar soundboard</button></a>
+    </div>
+  </div>
 </body>
 </html>

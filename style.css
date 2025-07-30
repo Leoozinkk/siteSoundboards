@@ -1,5 +1,4 @@
 *{
-    font-family: sans-serif;
     text-decoration: none;
     margin: 0;
     padding: 0;
@@ -8,9 +7,11 @@
 #header{
     padding-top: 1%;
     padding-bottom: 1%;
-    max-width: 100%;
-    background-color: #0094C3;
+    max-width: 2000px;
+    background-color: #2038a5;
+    margin: auto;
     text-align: center;
+    box-shadow: 0px 15px 25px #091030;
 }
 
 #titleText{
@@ -18,68 +19,110 @@
     font-size: 3rem;
 }
 
-#main{
-    max-width: 900px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.section{
+.main{
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 2000px;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.selector{
+    width: 450px;
+    border-radius: 55px;
     margin: auto;
+    margin-bottom: 20px;
     text-align: center;
-    max-width: 900px;
-    height: 200px;
-    font-size: 4rem;
-    border-radius: 3rem;
-    border: 8px solid #4a1703;
 }
 
-section:hover{
-    cursor: pointer;
+#selector1{
+    background-color: #008000;
+    border: 10px #005000 solid;
 }
 
-#secChaves{
-    background-image: url(chaves/images/Hahahahah\ \(banner\).png);
-    background-size: cover;
-    background-position: center;
+#selector2{
+    background-color: #808080;
+    border: 10px #303030 solid;
 }
 
-#secLuiz{
-    background-image: url(luiz/images/luiz1.png);
-    background-size: cover;
-    background-position: center;
+#selector3{
+    background-color: #a52a2a;
+    border: 10px #741e1e solid;
 }
 
-#secAlejo{
-    background-image: url(alejandro/images/alejandroVIADO.jpg);
-    background-size: cover;
-    background-position: center;
+#selector4{
+    background-color: #ffffff;
+    border: 10px #c0c0c0 solid;
 }
 
-#secCarlinhos{
-    background-image: url(carlinhos/images/Carlinhos.png);
-    background-size: cover;
-    background-position: center;
+img{
+    transition: 0.3s;
 }
 
-p{
+#selector1:hover>img, #selector2:hover>img, #selector3:hover>img, #selector4:hover>img{
+    transform: scale(1.1, 1.1);
+}
+
+.icon{
+    width: 250px; 
+    height: 250px;
+    border-radius: 30px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+hr{
+    border: none;
+    background-color: #505050;
+    width: 85%;
+    height: 2px;
     margin: auto;
-    padding: 0.5%;
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.btn{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.btn-light:hover{
+    background-color: #222222;
     color: #ffffff;
-    text-decoration: none;
+}
+
+.btn-dark:hover{
+    background-color: #cccccc;
+    color: #222222;
 }
 
 @media (max-width: 855px){
-    .section{
-        text-align: center;
-        font-size: 2rem;
-        width: 90%;
+    #header>h1{
+        font-size: 3rem;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
-    #titleText{
-        font-size: 2rem;
-        padding: 15px;
+    .selector{
+        width: 200px;
+    }
+
+    .icon{
+        width: 150px; 
+        height: 150px;
+    }
+
+    .selector>h1{
+        font-size: 1.5rem;
+    }
+
+    .btn{
+        font-size: 0.7rem;
     }
 }
