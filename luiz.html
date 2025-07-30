@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="luiz/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="luiz/style.css">
   <title>Luiz Soundboard</title>
   <link rel="shortcut icon" href="luiz/images/luiz2.png" type="image/x-icon">
 </head>
@@ -18,28 +18,40 @@
   <audio src="luiz/sounds/musica.mp3"></audio>
   <audio src="luiz/sounds/perdido na estrada.mp3"></audio>
   <audio src="luiz/sounds/pra que isso cecato.mp3"></audio>
+  <audio src="luiz/sounds/barbie girl.mp3"></audio>
+  <audio src="luiz/sounds/musica 2025.mp3"></audio>
   <audio src="luiz/sounds/que isso.mp3"></audio>
   <audio src="luiz/sounds/pauloescobrano.mp3"></audio>
   <audio src="luiz/sounds/loleza1.mp3"></audio>
   <audio src="luiz/sounds/loleza.mp3"></audio>
+  <audio src="luiz/sounds/ain loleza.mp3"></audio>
   <audio src="luiz/sounds/lolezaR.mp3"></audio>
   <audio src="luiz/sounds/discovoador.mp3"></audio>
   <audio src="luiz/sounds/bom dia otarios.mp3"></audio>
+  <audio src="luiz/sounds/discutindo1.mp3"></audio>
+  <audio src="luiz/sounds/discutindo2.mp3"></audio>
+  <audio src="luiz/sounds/discutindo3.mp3"></audio>
   <audio src="luiz/sounds/tiquinho.mp3"></audio>
   <audio src="luiz/sounds/aguafria.mp3"></audio>
+  <audio src="luiz/sounds/rir para nao chorar.mp3"></audio>
   <audio src="luiz/sounds/esquizofrenia.mp3"></audio>
   <audio src="luiz/sounds/quer x tudo.mp3"></audio>
   <audio src="luiz/sounds/cagano.mp3"></audio>
   <audio src="luiz/sounds/cecato.mp3"></audio>
   <audio src="luiz/sounds/só falei pro Ryusei.mp3"></audio>
+  <audio src="luiz/sounds/alejandro mamada.mp3"></audio>
+  <audio src="luiz/sounds/alejandro apelao.mp3"></audio>
+  <audio src="luiz/sounds/cara do alejandro.mp3"></audio>
   <audio src="luiz/sounds/nao gosto de v.mp3"></audio>
   <audio src="luiz/sounds/calica manito.mp3"></audio>
+  <audio src="luiz/sounds/ai calica giovaniiiii.mp3"></audio>
   <audio src="luiz/sounds/cala boca limão.mp3"></audio>
   <audio src="luiz/sounds/mew.mp3"></audio>
   <audio src="luiz/sounds/ia.mp3"></audio>
   <audio src="luiz/sounds/bora de lol.mp3"></audio>
   <audio src="luiz/sounds/peidei na tua cara.mp3"></audio>
   <audio src="luiz/sounds/bora bill.mp3"></audio>
+  <audio src="luiz/sounds/round six.mp3"></audio>
   <audio src="luiz/sounds/cagou.mp3"></audio>
   <audio src="luiz/sounds/alejandro escorregou.mp3"></audio>
   <audio src="luiz/sounds/alejandro quietinho.mp3"></audio>
@@ -53,7 +65,6 @@
   <audio src="luiz/sounds/julia.mp3"></audio>
   <audio src="luiz/sounds/sinais.mp3"></audio>
   <audio src="luiz/sounds/chorando.mp3"></audio>
-  <audio src="luiz/sounds/misterious.mp3" id="sfx"></audio>
 
   <header>
     <div class="container-fluid" id="header">
@@ -63,11 +74,11 @@
   </header>
   
   <div class="container-fluid">
-    <section id="disclaimer"><p><e id="atencao">ATENÇÃO:</e>&nbsp; alguns dos áudios a seguir podem estar mais altos ou mais baixos que os outros. Mas não culpe este singelo programador por esse problema, e sim o animal que grava esses áudios com microfone de geladeira. ❤️</p></section>
+    <section id="disclaimer"><p><e id="atencao">🚨ATENÇÃO!🚨</e><br>Alguns dos áudios a seguir podem estar mais altos ou mais baixos que os outros. Não culpe, entretanto, este singelo programador por esse problema, mas sim o animal que grava esses áudios com microfone de geladeira. ❤️</p></section>
     <div class="row">
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn" id="hold">Música - GEOVANNA</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn" id="hold">Música - GEOVANNA</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -76,10 +87,10 @@
           <img src="seta.png" class="transcImg">
         </div>
       </div>
-      <div id="divCecato" style="display: none">
+      <div id="divCecato" style="display: none;">
         <div class="col">
-          <img src="luiz/images/cecato.png" alt="Luizão" class="soundsimg"><br>
-          <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (Cecato Cover)</button><br>
+          <div class="soundsimgCecato"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+          <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (Cecato Cover)</button>
           <div class="transcBox">
             <p class="transcTitle">Transcrição do áudio</p>
             <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -89,20 +100,20 @@
           </div>
         </div>
         <div class="col">
-          <img src="luiz/images/cecato.png" alt="Luizão" class="soundsimg"><br>
-          <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (Dudu, Paulo e Cecato Cover)</button><br>
+          <div class="soundsimgCecato"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+          <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (Dudu, Paulo e Cecato Cover)</button>
           <div class="transcBox">
             <p class="transcTitle">Transcrição do áudio</p>
             <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
-            <div class="transcText">Geovanna, seu nome é Geovanna. Seu nome começa com G de minha gata, minha gatinha. Ela começa com G, G de quê? G de minha gata. Oh ye-eah. Quando eu te vi pela primeira ve-ez, você não dava bola pra mi-im. Daí quando chego-ou 2003, o mundo girou e você é só minha, minha o quê? Minha gata, minha gatinha, minha gata.</div>
+            <div class="transcText">🎵🎶Geovanna, seu nome é Geovanna. Seu nome começa com G de minha gata, minha gatinha. Ela começa com G, G de quê? G de minha gata. Oh ye-eah. Quando eu te vi pela primeira ve-ez, você não dava bola pra mi-im. Daí quando chego-ou 2003, o mundo girou e você é só minha, minha o quê? Minha gata, minha gatinha, minha gata.🎶🎵</div>
             <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
             <img src="seta.png" class="transcImg">
           </div>
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (desculpas)</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música - GEOVANNA (desculpas)</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -112,8 +123,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Música - Namorada</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música - Namorada</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -123,8 +134,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Música - Perdido na Estrada</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música - Perdido na Estrada</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -134,8 +145,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Música(?) - Pra que isso Cecato?</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música(?) - Pra que isso Cecato?</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -145,8 +156,30 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Que isso, meu amigo?</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música - Barbie Girl</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">🎵🎶Sou a Barbie Girl, se você quer ser... meu namorado, fica ligado. Presta atenção, na minha condição. *voz grossa* Sou a Barbie Girl, se você quer ser... meu namorado, fica ligado. Presta atenção, na minha condição, fica ligado. *voz metal(?)* Sou a Barbie Girl, se você quer ser... meu namorado, fica li...🎶🎵</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Música - 2025</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">🎵🎶Que esse ano seja maravilhoso, esse grupo abençoado. 2025 com vitórias, pessoal.🎶🎵</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Que isso, meu amigo?</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -156,8 +189,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Paulo Escobrano</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Paulo Escobrano</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -167,8 +200,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Loleza 1</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Loleza 1</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -178,8 +211,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Loleza 2</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Loleza 2</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -189,8 +222,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Loleza - Remix</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Ain Loleza</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ain Loleza.</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Loleza - Remix</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -200,8 +244,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Já chegou o disco voador</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Já chegou o disco voador</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -211,8 +255,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Bom dia otários</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Bom dia otários</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -222,8 +266,41 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Tiquinho igual meu carrinho</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Discutindo com Giovane</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ô Giovane, é... não só porque eu tinha franja que eu mudei, tá? Não é- n- n- não é porque eu só mudei porque eu tinha franja, tá? Mudei muito, tá? Tem uma foto do Tesla, cara... uma foto do Tesla que eu... que eu tenho no meu celular, véi, lá quando vocês estavam no Tesla, cara, e é... Tem aquela foto lá que tem to- todo mundo na- na- na frente da escola, aquela foto bem antiga né, lá de 2022 ou 2023, acho. Mano, depois que eu olhei aquela foto e- e olhei uma foto minha de agora, cara... Nossa, mudei todo, cara... mudei muito, cara... mudei muito. Num fica me zoando, tá, Giovane? Não sei porque você tá falando essas coisas, beleza? Mudei bastante, tá? Beleza?</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Discutindo com Giovane 2</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ô Giovane, você é bem aleatório, mano. Pô, do nada você... fala isso. "Não, o Luiz não mudou nada, antigamente ele tinha uma franja e agora ele não tem mais". Giovane, cara, mudei muito, cara. Mudei muito de físico, né, que agora to um pouquinho mais forte, né, e de aparência, mano, mudei muito, cara, 'tendeu? Porque as pessoas mudam se c- Ô Giovane, uma coisa: as pessoas mudam, mano. Quando vai passando os anos, mano, as pessoas mudam, de aparência, de fís- de aparência física e aparência... né? Né... Aparência de beleza, também, tá bom? Giovane, bem, tipo, be- be- bem aleatório você falar isso, mano... Mas de boa, mano, se você acha isso, mano. Cê podia- cê podia guardar isso pra você, né, mano? Não precisa ficar falando no grupo, beleza? Mas, só uma- fala mal- só fa- falar de você, Giovane, aah- voc- antigamente você era bonito, agora você tá... tá- tá feio, tá? É, maia... ma... ma- ma- mais uma coisa pra reparar, beleza? Desculpa aí.</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Discutindo com Ryusei</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ô "Ryuseios", e eu aí- e eu... e eu tô nem aí pra... pra sua resposta, cara. Vai se f... *suspiro*</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Tiquinho igual meu carrinho</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -233,8 +310,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Água fria</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Água fria</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -244,8 +321,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Esquizofrenia</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Rir para não chorar</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Rir para não chorar.</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Esquizofrenia</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -255,8 +343,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Quer X-Tudo?</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Quer X-Tudo?</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -266,8 +354,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Luiz cagando</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Luiz cagando</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -277,8 +365,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Cecato cagou</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Cecato cagou</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -288,8 +376,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Só falei pro Ryusei</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Só falei pro Ryusei</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -299,8 +387,41 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Não gosto de homem</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro e...</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Alejandro... e mamada.</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro apelão</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ai Alejandro, (???) apelão.</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Cobrir sua cara</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Vou cobrir sua cara, Alejandro, de jeitos que você nem imagina q... que... que eu posso fazer, mano. Pegar aquela cor branc- Opa, lá ele. Hahahaa-</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Não gosto de homem</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -310,8 +431,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Ai Calica Alejandro</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Ai Calica Alejandro</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -321,8 +442,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Cala boca Limão</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Ai Calica Giovane</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Ai Caliiica Giovaneeee!</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Cala boca Limão</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -332,8 +464,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Mew</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Mew</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -343,19 +475,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Luiz falando verdades</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Luiz falando verdades</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
-          <div class="transcText">Palmeiras não tem mundial e eu torço pro Corinthians, e o Lakers também é péssimo, nossa senhora.</div>
+          <div class="transcText">Palmeiras não tem mundial e eu torço pro Corinthians e o Lakers também é péssimo, nossa senhora.</div>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
           <img src="seta.png" class="transcImg">
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">🖕🖕🖕</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">🖕🖕🖕</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -365,8 +497,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Peidei</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Peidei</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -376,8 +508,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Bora Bill</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Bora Bill</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -387,8 +519,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Luiz Luiz, cagou...</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Round Six</button>
+        <div class="transcBox">
+          <p class="transcTitle">Transcrição do áudio</p>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <div class="transcText">Batatinha frita, um, dois, trê- PÁ!</div>
+          <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
+          <img src="seta.png" class="transcImg">
+        </div>
+      </div>
+      <div class="col">
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Luiz Luiz, cagou...</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -398,8 +541,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro, Alejandro</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro, Alejandro</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -409,8 +552,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro, Alejandro 2</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Alejandro, Alejandro 2</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -420,8 +563,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Loleza, Loleza</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Loleza, Loleza</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -431,8 +574,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Ai seu viado</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Ai seu viado</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -442,8 +585,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Criança</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Criança</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -453,8 +596,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Pelo menos...</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Pelo menos...</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -464,8 +607,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Fica quieto arrombado</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Fica quieto arrombado</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -475,8 +618,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Olha o Antônio</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Olha o Antônio</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -486,8 +629,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Luiz abobalhado</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Luiz abobalhado</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -497,8 +640,8 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Júlia</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Júlia</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -508,19 +651,19 @@
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">Nunca dei sinais</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">Nunca dei sinais</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
-          <div class="transcText">Nunca dei sinais que eu sou viado e nunca dei- dei sinais, sou homem macho... macho. E- eu n- eu não visto igual mulher, não uso... não uso cacinha, não uso, é... chinelinho havaiana de mulherzinho, não uso maquiagem, não fico no espelho fazendo, é... (???) no Instagram. "Amiga, vamos passar esse produtinho da Naturo", não vagabundo, eu sou homem, faço esporte de homem, karatê. É de... pessoas- meninas também pode fazer karatê, mas eu faço lutas... marciais e eu- eu não fico igual- eu não faço, é... coisa de mulherzinha, faço coisas de macho. Então... então você tá me xingando... de uma coisa que eu não sou, beleza? Para.</div>
+          <div class="transcText">Nunca dei sinais que eu sou viado e nunca dei- dei sinais, sou homem macho... macho. E- eu n- eu não visto igual mulher, não uso... não uso calcinha, não uso, é... chinelinho havaiana de mulherzinho, não uso maquiagem, não fico no espelho fazendo, é... (???) no Instagram. "Amiga, vamos passar esse produtinho da Naturo", não vagabundo, eu sou homem, faço esporte de homem, karatê. É de... pessoas- meninas também pode fazer karatê, mas eu faço lutas... marciais e eu- eu não fico igual- eu não faço, é... coisa de mulherzinha, faço coisas de macho. Então... então você tá me xingando... de uma coisa que eu não sou, beleza? Para.</div>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
           <img src="seta.png" class="transcImg">
         </div>
       </div>
       <div class="col">
-        <img src="luiz/images/luiz3.png" alt="Luizão" class="soundsimg"><br>
-        <button type="button" class="btn btn-success btn-block audiobtn">"Chorando"</button><br>
+        <div class="soundsimgLuiz"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"><img src="speaker.png" alt="Áudio sendo tocado" class="speaker"></div>
+        <button type="button" class="btn btn-success btn-block audiobtn">"Chorando"</button>
         <div class="transcBox">
           <p class="transcTitle">Transcrição do áudio</p>
           <hr style="height: 0.5mm; background-color: #D7D7D7; border: 0; margin: 0;">
@@ -534,16 +677,26 @@
     <footer>
       <center>
         <div class="container" id="mute">
-          <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os sons</button><br>
+          <button type="button" class="btn btn-danger btn-lg" id="btnmute">Mutar todos os áudios</button>
         </div>
-        <div class="container" id="parar">
+        <div class="container" id="opcao">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" id="opcaoSpeaker" checked>
+              </div>
+            </div>
+            <label class="form-control">Exibir alto-falantes</label>
+          </div>
+        </div>
+        <div class="container" id="opcao" style="margin-top: 5px;">
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <input type="checkbox" id="opcaoParar" checked>
               </div>
             </div>
-            <label class="form-control">Parar um som quando outro começar</label>
+            <label class="form-control">Parar os áudios quando outro começar</label>
           </div>
         </div>
         <a href="index.html"><button class="btn btn-danger btn-lg" id="voltar">VOLTAR AO MENU DO SITE</button></a>
