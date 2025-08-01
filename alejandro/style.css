@@ -84,6 +84,7 @@ button.btn-light:hover{
 }
 
 .transcText{
+    user-select: text;
     hyphens: auto;
     display: none;
     padding: 3.5px;
