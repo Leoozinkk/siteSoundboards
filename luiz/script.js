@@ -1,44 +1,109 @@
 const buttons = document.getElementsByClassName('audiobtn');
 let audio = document.querySelectorAll('audio');
 const speaker = document.getElementsByClassName('speaker');
+const input = document.querySelectorAll('input[type="range"]');
 
-for (let i = 0; i < buttons.length; i++){ // relaciona a ordem da posição botão apertado com a dos áudios e ativa seu respectivo ícone de alto-falante
-  buttons[i].onclick = function(){
-    voltarDoZero();
-    audio[i].play();
-    speakerDisplay(i);
-  };
-}
-
-document.getElementById('btnmute').onclick = function(){parar()}; //botão de mute
-
-//função q faz todos os áudios pararem (usado no botão de mute)
+//função q faz todos os áudios pararem
 function parar(){
   for (let i = 0; i < audio.length; i++) {
     audio[i].pause(); //pausar o som onde ele está
-    audio[i].currentTime = 0; //voltar o som do zero
-    if (speaker[i]) { // confere se a chamada para o "speaker" existe para evitar erros
-      speaker[i].style.display = 'none';
-    }
+  }
+};
+
+//botão de mute
+document.getElementById('btnmute').onclick = function(){
+  parar();
+  for (let i = 0; i < audio.length; i++){
+    audio[i].currentTime = 0;
   }
 };
 
 //função que faz os áudios pararem apenas se a checkbox estiver verificada (usado nos botões de áudio)
 function voltarDoZero(){
-  let checkbox_parar = document.getElementById('opcaoParar'); //checkbox de parar os sons
-  if (checkbox_parar.checked) {
+  if (document.getElementById('opcaoPausar').checked) {
     parar();
   }
 };
 
+//faz o valor do input acompanhar o tempo do áudio (vezes 100 pra ser mais flúido)
+function barraDeAudio(arg){
+  audio[arg].addEventListener('timeupdate', ()=>{
+    input[arg].value = ((audio[arg].currentTime.toFixed(2))*100); //toFixed(2) para quando for multiplicado ser um número inteiro
+  });
+  input[arg].addEventListener('input', ()=>{
+    audio[arg].currentTime = ((input[arg].value)/100);
+  });
+}
+
 //função que determina se os ícones de alto-falantes aparecem ou não segundo a checkbox e depois desaparecem quando acabar o áudio
 function speakerDisplay(arg){
-  let checkbox_speaker = document.getElementById('opcaoSpeaker');
-  if (checkbox_speaker.checked){
-    speaker[arg].style.display = 'block';
+  if (document.getElementById('opcaoSpeaker').checked){
+    audio[arg].addEventListener('playing', ()=>{
+      speaker[arg].style.display = 'block';
+    })
   }
-  audio[arg].onended = function(){speaker[arg].style.display = 'none';}
 };
+
+for (let i = 0; i < audio.length; i++){ //faz todas as configurações necessárias e depois toca o áudio
+  audio[i].addEventListener('loadedmetadata', ()=>{ //define o valor máximo do input baseado no áudio após ele ter carregado
+    input[i].max = ((audio[i].duration.toFixed(2))*100) //toFixed(2) para quando for multiplicado ser um número inteiro
+  });
+  buttons[i].onclick = function(){
+    if(audio[i].paused){
+      console.log(input[i].max)
+      voltarDoZero();
+      audio[i].currentTime = (input[i].value/100);
+      audio[i].play();
+      barraDeAudio(i);
+      speakerDisplay(i);
+      audio[i].onpause = function(){speaker[i].style.display = 'none';};
+      audio[i].onended = function(){audio[i].currentTime = 0;}
+    }else{
+      audio[i].pause();
+    }
+  };
+}
+
+
+//fazer o balão do transcritor abrir ao clicar
+const opcaoSeta = document.getElementsByClassName('transcImg');
+const textoTranscrito = document.getElementsByClassName('transcText');
+
+for (let i = 0; i < opcaoSeta.length; i++) {
+  opcaoSeta[i].onclick = function(){
+    if(textoTranscrito[i].style.display != 'block'){
+      textoTranscrito[i].style.display = 'block';
+      opcaoSeta[i].style.rotate = '180deg';
+    }else{
+      textoTranscrito[i].style.display = 'none';
+      opcaoSeta[i].style.rotate = '0deg';
+    }
+  };
+};
+
+//muda o id do input se o mouse (ou toque) for em cima dele (usado para estilização do ponteiro)
+for (let i = 0; i < input.length; i++) {
+  input[i].addEventListener('mouseenter', ()=>{
+    input[i].id = 'input-ativo';
+    console.log('id colocado');
+  });
+  input[i].addEventListener('touchstart', ()=>{
+    input[i].id = 'input-ativo';
+    console.log('id colocado');
+  });
+  input[i].addEventListener('mouseout', ()=>{
+    input[i].id = 'input-nao-ativo';
+    console.log('id tirado');
+  });
+  input[i].addEventListener('touchend', ()=>{
+    input[i].id = 'input-nao-ativo';
+    console.log('id tirado');
+  });
+  input[i].addEventListener('touchcancel', ()=>{
+    input[i].id = 'input-nao-ativo';
+    console.log('id tirado');
+  });
+}
 
 //SEU GATOOOOOOOOOO
 let sfx = new Audio('luiz/sounds/misterious.mp3')
@@ -78,19 +143,3 @@ botaoSegurar.addEventListener('touchstart', () => {
 botaoSegurar.addEventListener('touchend', () => {
 	clearTimeout(timer);
 });
-
-//fazer o balão do transcritor abrir ao clicar
-const opcaoSeta = document.getElementsByClassName('transcImg');
-const textoTranscrito = document.getElementsByClassName('transcText');
-
-for (let i = 0; i < opcaoSeta.length; i++) {
-  opcaoSeta[i].onclick = function(){
-    if(textoTranscrito[i].style.display != 'block'){
-      textoTranscrito[i].style.display = 'block';
-      opcaoSeta[i].style.rotate = '180deg';
-    }else{
-      textoTranscrito[i].style.display = 'none';
-      opcaoSeta[i].style.rotate = '0deg';
-    }
-  };
-}
