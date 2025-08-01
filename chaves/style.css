@@ -38,6 +38,7 @@ body{
 }
 
 .col{
+    user-select: none;
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 30px;
