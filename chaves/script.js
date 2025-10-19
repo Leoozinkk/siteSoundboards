@@ -3,104 +3,51 @@ let audio = document.querySelectorAll('audio');
 const speaker = document.getElementsByClassName('speaker');
 const input = document.querySelectorAll('input[type="range"]');
 
-//função q faz todos os áudios pararem
 function parar(){
   for (let i = 0; i < audio.length; i++) {
-    audio[i].pause(); //pausar o som onde ele está
+    audio[i].pause();
   }
-};
+}
 
 //botão de mute
-document.getElementById('btnmute').onclick = function(){
-  parar();
+document.getElementById('btnmute').onclick = () => {
   for (let i = 0; i < audio.length; i++){
+    audio[i].pause();
     audio[i].currentTime = 0;
-  }
-};
-
-//função que faz os áudios pararem apenas se a checkbox estiver verificada (usado nos botões de áudio)
-function voltarDoZero(){
-  if (document.getElementById('opcaoPausar').checked) {
-    parar();
-  }
-};
-
-//faz o valor do input acompanhar o tempo do áudio (vezes 100 pra ser mais flúido)
-function barraDeAudio(arg){
-  audio[arg].addEventListener('timeupdate', ()=>{
-    input[arg].value = ((audio[arg].currentTime.toFixed(2))*100); //toFixed(2) para quando for multiplicado ser um número inteiro
-  });
-  input[arg].addEventListener('input', ()=>{
-    audio[arg].currentTime = ((input[arg].value)/100);
-  });
+  };
 }
 
 //função que determina se os ícones de alto-falantes aparecem ou não segundo a checkbox e depois desaparecem quando acabar o áudio
 function speakerDisplay(arg){
   if (document.getElementById('opcaoSpeaker').checked){
-    audio[arg].addEventListener('playing', ()=>{
-      speaker[arg].style.display = 'block';
-    })
+    audio[arg].onplaying = () => speaker[arg].style.display = 'block';
   }
 };
 
-for (let i = 0; i < audio.length; i++){ //faz todas as configurações necessárias e depois toca o áudio
-  audio[i].addEventListener('loadedmetadata', ()=>{ //define o valor máximo do input baseado no áudio após ele ter carregado
-    input[i].max = ((audio[i].duration.toFixed(2))*100) //toFixed(2) para quando for multiplicado ser um número inteiro
-  });
-  buttons[i].onclick = function(){
+//cada operação dentro do loop for
+for (let i = 0; i < audio.length; i++){
+
+  audio[i].onloadedmetadata = () => input[i].max = audio[i].duration //define o valor máximo do input baseado no áudio após ele ter carregado
+
+  buttons[i].onclick = () =>{
     if(audio[i].paused){
-      console.log(input[i].max)
-      voltarDoZero();
-      audio[i].currentTime = (input[i].value/100);
+      if (document.getElementById('opcaoPausar').checked){parar()}
+      audio[i].currentTime = input[i].value;
       audio[i].play();
-      barraDeAudio(i);
+      input[i].oninput = () => audio[i].currentTime = input[i].value;
       speakerDisplay(i);
-      audio[i].onpause = function(){speaker[i].style.display = 'none';};
-      audio[i].onended = function(){audio[i].currentTime = 0;}
     }else{
       audio[i].pause();
     }
   };
-}
+  audio[i].ontimeupdate = () => input[i].value = audio[i].currentTime
+  audio[i].onpause = () => speaker[i].style.display = 'none';
+  audio[i].onended = () => audio[i].currentTime = 0;
 
-
-//fazer o balão do transcritor abrir ao clicar
-const opcaoSeta = document.getElementsByClassName('transcImg');
-const textoTranscrito = document.getElementsByClassName('transcText');
-
-for (let i = 0; i < opcaoSeta.length; i++) {
-  opcaoSeta[i].onclick = function(){
-    if(textoTranscrito[i].style.display != 'block'){
-      textoTranscrito[i].style.display = 'block';
-      opcaoSeta[i].style.rotate = '180deg';
-    }else{
-      textoTranscrito[i].style.display = 'none';
-      opcaoSeta[i].style.rotate = '0deg';
-    }
-  };
-};
-
-//muda o id do input se o mouse (ou toque) for em cima dele (usado para estilização do ponteiro)
-for (let i = 0; i < input.length; i++) {
-  input[i].addEventListener('mouseenter', ()=>{
-    input[i].id = 'input-ativo';
-    console.log('id colocado');
-  });
-  input[i].addEventListener('touchstart', ()=>{
-    input[i].id = 'input-ativo';
-    console.log('id colocado');
-  });
-  input[i].addEventListener('mouseout', ()=>{
-    input[i].id = 'input-nao-ativo';
-    console.log('id tirado');
-  });
-  input[i].addEventListener('touchend', ()=>{
-    input[i].id = 'input-nao-ativo';
-    console.log('id tirado');
-  });
-  input[i].addEventListener('touchcancel', ()=>{
-    input[i].id = 'input-nao-ativo';
-    console.log('id tirado');
-  });
+  /*muda o id do input se o mouse (ou toque) for em cima dele (usado para estilização do ponteiro)
+  input[i].onmouseenter = () => input[i].id = 'input-ativo';
+  input[i].ontouchstart = () => input[i].id = 'input-ativo';
+  input[i].onmouseout = () => input[i].id = 'none';
+  input[i].ontouchend = () => input[i].id = 'none';
+  input[i].ontouchcancel = () => input[i].id = 'none';*/
 }
