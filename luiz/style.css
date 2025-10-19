@@ -27,7 +27,7 @@
 #disclaimer{
     margin: auto;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    width: 70%;
+    width: 80%;
     background-color: #ffffff;
     font-size: 1.6rem;
     border: #808080 5px solid;
@@ -179,12 +179,14 @@ footer{
 
 @media (max-width: 768px){
     #disclaimer{
-        font-size: 1rem;
-        padding: 1px;
+        width: 70%;
+        font-size: 0.8rem;
+        padding: 4px;
+        border: #808080 3px solid;
     }
 
     #atencao{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #header{
@@ -193,6 +195,7 @@ footer{
 
     #logo{
         width: 150px;
+        margin: 10px;
     }
 
     #titleText{
