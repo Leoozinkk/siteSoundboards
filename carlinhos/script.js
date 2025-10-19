@@ -17,13 +17,6 @@ document.getElementById('btnmute').onclick = () => {
   };
 }
 
-//função que determina se os ícones de alto-falantes aparecem ou não segundo a checkbox e depois desaparecem quando acabar o áudio
-function speakerDisplay(arg){
-  if (document.getElementById('opcaoSpeaker').checked){
-    audio[arg].onplaying = () => speaker[arg].style.display = 'block';
-  }
-};
-
 //cada operação dentro do loop for
 for (let i = 0; i < audio.length; i++){
 
@@ -35,7 +28,7 @@ for (let i = 0; i < audio.length; i++){
       audio[i].currentTime = input[i].value;
       audio[i].play();
       input[i].oninput = () => audio[i].currentTime = input[i].value;
-      speakerDisplay(i);
+      if (document.getElementById('opcaoSpeaker').checked){speaker[i].style.display = 'block';}
     }else{
       audio[i].pause();
     }
