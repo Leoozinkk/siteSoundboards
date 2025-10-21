@@ -1,7 +1,7 @@
-const buttons = document.getElementsByClassName('audiobtn');
 let audio = document.querySelectorAll('audio');
-const speaker = document.getElementsByClassName('speaker');
 const input = document.querySelectorAll('input[type="range"]');
+const buttons = document.getElementsByClassName('audiobtn');
+const speaker = document.getElementsByClassName('speaker');
 const opcaoSeta = document.getElementsByClassName('transcImg');
 const textoTranscrito = document.getElementsByClassName('transcText');
 
