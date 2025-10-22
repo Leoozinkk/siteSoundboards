@@ -2,6 +2,36 @@
     border-radius: 100%;
 }
 
+#loading{
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%; 
+    width: 100%;
+    background-color: #000000e0;
+    z-index: 1;
+    transition: 0.5s ease-out 0.2s;
+    transition-behavior: allow-discrete; /*permite transições de elementos não-animaveis (opacidade por exemplo)*/
+}
+
+#loadingContent{
+    font-size: 5rem;
+    margin: auto;
+    color: #fff;
+}
+
+#loadingGif{
+    background-image: url(/loading.gif);
+    background-size: cover;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
 body{
     background-image: url(images/background.jpg);
 }
@@ -49,6 +79,8 @@ body{
 .btn-light{
     max-width: 450px;
     margin: auto;
+    padding-right: 3px;
+    padding-left: 3px;
     margin-top: 21px;
 }
 
@@ -114,14 +146,8 @@ footer{
 }
 
 @media (max-width: 768px){
-    .soundsimg{
-        width: 250px;
-        height: 250px;
-    }
-
-    .speaker{
-        width: 250px;
-        height: 250px;
+    #loadingContent{
+        font-size: 3rem;
     }
 
     #header{
@@ -136,12 +162,23 @@ footer{
         font-size: 40px;
     }
 
-    .col{
-        padding: 5%;
+    .soundsimg{
+        width: 176px;
+        height: 176px;
+    }
+
+    .speaker{
+        width: 170px;
+        height: 170px;
+    }
+
+    .btn-light{
+        font-size: 0.7rem;
+        max-width: 176px;
     }
 
     input[type='range']{
-        width: 260px;
+        width: 176px;
     }
 
     #mute{
@@ -159,24 +196,67 @@ footer{
 }
 
 @media (max-width: 375px){
+    .soundsimg{
+        width: 150px;
+        height: 150px;
+    }
+
+    .speaker{
+        width: 145px;
+        height: 145px;
+    }
+
+    .btn-light{
+        font-size: 0.6rem;
+        max-width: 150px;
+    }
+
+    input[type='range']{
+        width: 140px;
+    }
+
     #btnmute, #mute{
         margin: auto;
         margin-bottom: 4px;
         font-size: 1rem;
     }
+
     #opcao{
         margin-bottom: 7px;
     }
+
     .form-control{
         padding-left: 3px;
         padding-right: 3px;
         font-size: 0.8rem;
     }
+
     #voltar{
         height: 40px;
         margin: auto;
         width: auto;
         font-size: 0.95rem;
         margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 320px){
+    .soundsimg{
+        width: 210px;
+        height: 210px;
+    }
+
+    .speaker{
+        width: 205px;
+        height: 205px;
+    }
+
+    .btn-light{
+        font-size: 0.9rem;
+        max-width: 230px;
+    }
+
+    input[type='range']{
+        width: 200px;
     }
 }
