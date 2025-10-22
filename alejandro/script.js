@@ -5,6 +5,11 @@ const speaker = document.getElementsByClassName('speaker');
 const opcaoSeta = document.getElementsByClassName('transcImg');
 const textoTranscrito = document.getElementsByClassName('transcText');
 
+window.onload = () => {
+  document.getElementById('loading').style.opacity = 0;
+  document.getElementById('loading').style.display = 'none';
+}
+
 function parar(){
   for (let i = 0; i < audio.length; i++) {
     audio[i].pause();
@@ -39,7 +44,6 @@ for (let i = 0; i < audio.length; i++){
   audio[i].onpause = () => speaker[i].style.display = 'none';
   audio[i].onended = () => audio[i].currentTime = 0;
 
-  //fazer o balão do transcritor abrir ao clicar
   opcaoSeta[i].onclick = () => {
     if(textoTranscrito[i].style.display != 'block'){
       textoTranscrito[i].style.display = 'block';

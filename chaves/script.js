@@ -3,6 +3,11 @@ const input = document.querySelectorAll('input[type="range"]');
 const buttons = document.getElementsByClassName('audiobtn');
 const speaker = document.getElementsByClassName('speaker');
 
+window.onload = () => {
+  document.getElementById('loading').style.opacity = 0;
+  document.getElementById('loading').style.display = 'none';
+}
+
 function parar(){
   for (let i = 0; i < audio.length; i++) {
     audio[i].pause();
