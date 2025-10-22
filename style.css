@@ -102,11 +102,62 @@ hr{
     color: #222222;
 }
 
-@media (max-width: 855px){
+@media (max-width: 768px){
     #header>h1{
         font-size: 3rem;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    
+    #selector1{
+        border: 6px #005000 solid;
+    }
+
+    #selector2{
+        border: 6px #303030 solid;
+    }
+
+    #selector3{
+        border: 6px #741e1e solid;
+    }
+
+    #selector4{
+        border: 6px #c0c0c0 solid;
+    }
+
+    .selector{
+        width: 260px;
+    }
+
+    .icon{
+        width: 180px; 
+        height: 180px;
+    }
+
+    .selector>h1{
+        font-size: 2rem;
+    }
+
+    .btn{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px){
+    #selector1{
+        border: 4px #005000 solid;
+    }
+
+    #selector2{
+        border: 4px #303030 solid;
+    }
+
+    #selector3{
+        border: 4px #741e1e solid;
+    }
+
+    #selector4{
+        border: 4px #c0c0c0 solid;
     }
 
     .selector{
@@ -119,10 +170,82 @@ hr{
     }
 
     .selector>h1{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .btn{
         font-size: 0.7rem;
+    }
+}
+
+@media(max-width: 375px){
+    #selector1{
+        border: 4px #005000 solid;
+    }
+
+    #selector2{
+        border: 4px #303030 solid;
+    }
+
+    #selector3{
+        border: 4px #741e1e solid;
+    }
+
+    #selector4{
+        border: 4px #c0c0c0 solid;
+    }
+
+    .selector{
+        width: 170px;
+    }
+
+    .icon{
+        width: 140px; 
+        height: 140px;
+    }
+
+    .selector>h1{
+        font-size: 1.8rem;
+    }
+
+    .btn{
+        padding-left: 6px;
+        padding-right: 6px;
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width: 320px){
+    #selector1{
+        border: 4px #005000 solid;
+    }
+
+    #selector2{
+        border: 4px #303030 solid;
+    }
+
+    #selector3{
+        border: 4px #741e1e solid;
+    }
+
+    #selector4{
+        border: 4px #c0c0c0 solid;
+    }
+
+    .selector{
+        width: 250px;
+    }
+
+    .icon{
+        width: 180px; 
+        height: 180px;
+    }
+
+    .selector>h1{
+        font-size: 1.8rem;
+    }
+
+    .btn{
+        font-size: 1rem;
     }
 }
