@@ -219,6 +219,11 @@ footer{
         font-size: 0.8rem;
     }
 
+    .transcImg{
+        height: 15px;
+        width: 15px;
+    }
+
     input[type='range']{
         width: 176px;
     }
@@ -237,7 +242,7 @@ footer{
     }
 }
 
-@media (max-width: 375px){
+/*@media (max-width: 375px){
     .soundsimg{
         width: 150px;
         height: 150px;
@@ -325,4 +330,4 @@ footer{
     input[type='range']{
         width: 200px;
     }
-}
+}*/

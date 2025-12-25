@@ -195,7 +195,7 @@ footer{
     }
 }
 
-@media (max-width: 375px){
+/*@media (max-width: 375px){
     .soundsimg{
         width: 150px;
         height: 150px;
@@ -259,4 +259,4 @@ footer{
     input[type='range']{
         width: 200px;
     }
-}
+}*/
