@@ -1,7 +1,12 @@
 let audio = document.querySelectorAll('audio');
-const input = document.querySelectorAll('input[type="range"]');
+const barra = document.querySelectorAll('.audio-track')
+const progresso = document.querySelectorAll('.audio-progress')
 const buttons = document.getElementsByClassName('audiobtn');
 const speaker = document.getElementsByClassName('speaker');
+
+let isDragging = false;
+let currentAudio = null;
+let currentBarra = null;
 
 window.onload = () => {
   document.getElementById('loading').style.opacity = 0;
@@ -25,20 +30,39 @@ document.getElementById('btnmute').onclick = () => {
 //cada operação dentro do loop for
 for (let i = 0; i < audio.length; i++){
 
-  audio[i].onloadedmetadata = () => input[i].max = audio[i].duration //define o valor máximo do input baseado no áudio após ele ter carregado
-
   buttons[i].onclick = () =>{
     if(audio[i].paused){
-      if (document.getElementById('opcaoPausar').checked){parar()}
-      audio[i].currentTime = input[i].value;
+      if(document.getElementById('opcaoPausar').checked){parar()}
       audio[i].play();
-      input[i].oninput = () => audio[i].currentTime = input[i].value;
-      if (document.getElementById('opcaoSpeaker').checked){speaker[i].style.display = 'block';}
+      if(document.getElementById('opcaoSpeaker').checked){speaker[i].style.display = 'block';}
     }else{
       audio[i].pause();
     }
   };
-  audio[i].ontimeupdate = () => input[i].value = audio[i].currentTime
+
+  barra[i].onmousedown = (e) => {
+    isDragging = true;
+    currentAudio = audio[i];
+    currentBarra = barra[i];
+    const rect = barra[i].getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const barWidth = rect.width;
+    const percentage = clickX / barWidth;
+    audio[i].currentTime = percentage * audio[i].duration;
+  }
+
+  barra[i].ontouchmove = (e) => {
+    isDragging = true;
+    currentAudio = audio[i];
+    currentBarra = barra[i];
+    const rect = barra[i].getBoundingClientRect();
+    const clickX = e.touches[0].clientX - rect.left;
+    const barWidth = rect.width;
+    const percentage = clickX / barWidth;
+    audio[i].currentTime = percentage * audio[i].duration;
+  }
+  
+  audio[i].ontimeupdate = () => progresso[i].style.width = `${(audio[i].currentTime/Math.round(audio[i].duration))*100}%`
   audio[i].onpause = () => speaker[i].style.display = 'none';
   audio[i].onended = () => audio[i].currentTime = 0;
 
@@ -48,4 +72,20 @@ for (let i = 0; i < audio.length; i++){
   input[i].onmouseout = () => input[i].id = 'none';
   input[i].ontouchend = () => input[i].id = 'none';
   input[i].ontouchcancel = () => input[i].id = 'none';*/
+}
+
+document.onmousemove = (e) => {
+  if (isDragging && currentAudio && currentBarra) {
+    const rect = currentBarra.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const barWidth = rect.width;
+    const percentage = Math.max(0, Math.min(1, clickX / barWidth));
+    currentAudio.currentTime = percentage * currentAudio.duration;
+  }
+}
+
+document.onmouseup = () => {
+  isDragging = false;
+  currentAudio = null;
+  currentBarra = null;
 }
