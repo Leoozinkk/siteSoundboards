@@ -52,7 +52,6 @@ for (let i = 0; i < audio.length; i++){
   }
 
   barra[i].ontouchmove = (e) => {
-    isDragging = true;
     currentAudio = audio[i];
     currentBarra = barra[i];
     const rect = barra[i].getBoundingClientRect();
