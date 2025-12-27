@@ -65,6 +65,7 @@ body{
     width: 400px;
     height: 400px;
     display: none;
+    -webkit-user-drag: none;
 }
 
 .col{
@@ -90,32 +91,32 @@ button.btn-light:hover{
     color: white;
 }
 
-input[type="range"]{
-    appearance: none;
-    -webkit-appearance: none;
+.audio-track{
+    display: flex;
     justify-self: center;
-    background-color: transparent;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #bebebe;
     width: 400px;
-    border-radius: 20px;
+    height: 10px;
     cursor: pointer;
-    transition: 50ms linear;
 }
 
-input[type="range"]::-webkit-slider-runnable-track{
-    -webkit-appearance: none;
-    height: 8px;
-    border-radius: 20px;
-    background-color: #ffffff;
+.audio-progress{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #0077ff;
+    height: 10px;
+    width: 0px;
 }
 
-input[type="range"]::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    background-color: #00a2ff;
+.audio-thumb{
+    margin-left: -2%;
+    padding: 2%;
     border-radius: 50%;
-    margin-top: -4px;
-    transition: 50ms linear;
+    background-color: #0077ff;
+    cursor: pointer;
 }
 
 footer{
@@ -177,7 +178,7 @@ footer{
         max-width: 176px;
     }
 
-    input[type='range']{
+    .audio-track{
         width: 176px;
     }
 

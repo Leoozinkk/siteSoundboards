@@ -82,12 +82,21 @@ hr{
     height: 406px;
     margin: auto;
     border: 3px solid black;
+    overflow: hidden;
 }
 
 .speaker{
     width: 400px;
     height: 400px;
     display: none;
+    -webkit-user-drag: none;
+}
+
+#mundo{
+    width: inherit;
+    height: inherit;
+    background-size: 100% 100%;
+    justify-self: center;
 }
 
 .btn-light{
@@ -104,32 +113,32 @@ button.btn-light:hover{
     color: #dddddd;
 }
 
-input[type="range"]{
-    appearance: none;
-    -webkit-appearance: none;
+.audio-track{
+    display: flex;
     justify-self: center;
-    background-color: transparent;
-    width: 400px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 50ms linear;
-}
-
-input[type="range"]::-webkit-slider-runnable-track{
-    -webkit-appearance: none;
-    height: 8px;
+    align-items: center;
+    margin-top: 10px;
     border-radius: 20px;
     background-color: #ffffff;
+    width: 400px;
+    height: 10px;
+    cursor: pointer;
 }
 
-input[type="range"]::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    background-color: #00a2ff;
+.audio-progress{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #0077ff;
+    height: 10px;
+    width: 0px;
+}
+
+.audio-thumb{
+    margin-left: -2%;
+    padding: 2%;
     border-radius: 50%;
-    margin-top: -4px;
-    transition: 50ms linear;
+    background-color: #0077ff;
+    cursor: pointer;
 }
 
 footer{
@@ -187,7 +196,7 @@ footer{
         max-width: 176px;
     }
 
-    input[type='range']{
+    .audio-track{
         width: 176px;
     }
 
