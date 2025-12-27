@@ -83,6 +83,8 @@
 }
 
 .btn-light{
+    display: flex;
+    justify-content: center;
     max-width: 450px;
     padding-right: 3px;
     padding-left: 3px;
@@ -230,7 +232,7 @@ footer{
     }
 
     .audio-thumb{
-        padding: 6px;
+        padding: 7px;
     }
 
     #mute{

@@ -78,6 +78,8 @@ body{
 }
 
 .btn-light{
+    display: flex;
+    justify-content: center;
     max-width: 450px;
     margin: auto;
     padding-right: 3px;
@@ -113,7 +115,7 @@ button.btn-light:hover{
 
 .audio-thumb{
     margin-left: -2%;
-    padding: 2%;
+    padding: 8px;
     border-radius: 50%;
     background-color: #0077ff;
     cursor: pointer;
@@ -180,6 +182,10 @@ footer{
 
     .audio-track{
         width: 176px;
+    }
+
+    .audio-thumb{
+        padding: 7px;
     }
 
     #mute{
