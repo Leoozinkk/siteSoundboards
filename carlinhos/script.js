@@ -61,7 +61,7 @@ for (let i = 0; i < audio.length; i++){
     audio[i].currentTime = percentage * audio[i].duration;
   }
   
-  audio[i].ontimeupdate = () => progresso[i].style.width = `${(audio[i].currentTime/Math.round(audio[i].duration))*100}%`
+  audio[i].ontimeupdate = () => progresso[i].style.width = `${(audio[i].currentTime/audio[i].duration)*100}%`
   audio[i].onpause = () => speaker[i].style.display = 'none';
   audio[i].onended = () => audio[i].currentTime = 0;
 
